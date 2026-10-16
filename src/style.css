@@ -12,13 +12,10 @@ button {
     border: none;
 }
 
-button.active {
+button.active, button:hover {
     background-color: lightblue;
 }
 
-button:hover {
-    background-color: aquamarine;
-}
 
 nav {
     display: flex;
@@ -29,4 +26,5 @@ nav {
     font-size: 50px;
     display: flex;
     justify-content: center;
+    text-align: center;
 }

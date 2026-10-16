@@ -7,7 +7,7 @@ export function init() {
 
     const email = document.createElement("div");
     email.setAttribute("class", "email");
-    email.textContent = "ester@email.com";
+    email.textContent = "Contact us by email at ester@email.com";
 
     contact.appendChild(email);
 }

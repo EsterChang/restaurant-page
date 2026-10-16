@@ -5,12 +5,13 @@ import './style.css';
 
 const content = document.getElementById('content');
 
-const homeTab = document.querySelector(".home-button");
-const menuTab = document.querySelector(".menu-button");
-const contactTab = document.querySelector(".contact-button");
+const homeTab = document.querySelector('button[data-tab="home"]');
+const menuTab = document.querySelector('button[data-tab="menu"]');
+const contactTab = document.querySelector('button[data-tab="contact"]');
 const tabs = document.querySelectorAll("button");
 
 initHome();
+homeTab.classList.add("active");
 
 tabs.forEach(tab => {
     tab.addEventListener("click", (event) => {
