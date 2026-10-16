@@ -8,20 +8,24 @@ const content = document.getElementById('content');
 const homeTab = document.querySelector(".home-button");
 const menuTab = document.querySelector(".menu-button");
 const contactTab = document.querySelector(".contact-button");
+const tabs = document.querySelectorAll("button");
 
 initHome();
 
-homeTab.addEventListener("click", () => {
-    reset();
-    initHome();
-})
-menuTab.addEventListener("click", () => {
-    reset();
-    initMenu();
-})
-contactTab.addEventListener("click", () => {
-    reset();
-    initContact();
+tabs.forEach(tab => {
+    tab.addEventListener("click", (event) => {
+        reset();
+        tabs.forEach(tab => tab.classList.remove("active"));
+        event.target.classList.add("active");
+
+        if (event.target.dataset.tab == "home") {
+            initHome();
+        } else if (event.target.dataset.tab == "menu") {
+            initMenu();
+        } else if (event.target.dataset.tab == "contact") {
+            initContact();
+        }
+    })
 })
 
 
